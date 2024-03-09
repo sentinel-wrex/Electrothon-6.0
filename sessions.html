@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <main id="main">
+
+    <section id="facts">
+        <div class="container" data-aos="fade-up"></div>
+        <div class="section-header">
+            <h1 class="section-title">SESSION</h1>
+            <p class="section-description">Click the start button to begin this session. <br> Once the audio has played, use the recording button to start recording your voice and respond to the prompt.<br> Stop recording when you have finished and click next to continue through the session.</p>
+            <p style="text-align:center">
+            <h2 class="section-subtitle" id="question"></h2>
+            <div id="result">
+                <p class="section-text" id ="result"></p>
+            </div>
+          </div>
+                <div class="buttons">
+                    <button id="checker" class="startbutton" onclick="nextQuestion">Start</button>
+                    <button id="button" class="startbutton">Start listening</button>
+                    <p id="message" hidden aria-hidden="true">
+                    Your browser doesn't support Speech Recognition. Sorry.
+                    </p>
+                </div>
+                <form name="myform" hidden aria-hidden="true" action="/sendmail" method="POST">
+                  <button id="submit" name = "submit" type="submit" value="WHATEVER" class="startbutton">Send Me a copy of my responses</button>
+                </form>
+    </div>
+    </section>
+    <script src="static/js/session.js"></script>
+  </main>
+  {% endblock %}
