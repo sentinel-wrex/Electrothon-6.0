@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="hero">
+  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+    {% if current_user.is_authenticated %}
+    <h1>Hello {{ current_user.username }}</h1>
+    {% endif %}
+    <h1>Welcome to Happier</h1>
+    <h2>Embrace Your Journey: Where Therapy Meets the Enchanting Realms of Self-Discovery</h2>
+    <div class="buttons">
+      {% if current_user.is_authenticated %}
+      <a href="{{url_for('session')}}" class="btn-get-started">Join Session</a>
+      {% else %}
+      <!-- <a href="{{ url_for('login') }}" class="btn-get-started">Log In</a> -->
+      <!-- <a href="{{ url_for('register') }}" class="btn-get-started">Register</a> -->
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <section id="facts">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Facts</h3>
+        <p class="section-description">The depressing truth about access to mental health resources in the INDIA.</p>
+      </div>
+      <div class="row counters">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0.00" data-purecounter-end="70000000" data-purecounter-duration="1"
+            class="purecounter"></span>
+          <p>...INDIANS have had to wait longer than one week for mental health treatments.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+            class="purecounter"></span>
+          <p>...percent of the INDIANS sees cost and poor insurance coverage as the top barriers for accessing mental
+            health care.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="260000" data-purecounter-duration="1"
+            class="purecounter"></span>
+          <p>...percent of the INDIAN population reported having to choose between getting mental health treatment and
+            paying for daily necessities.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="29" data-purecounter-duration="1"
+            class="purecounter"></span>
+          <p>...percent of INDIANS wanted to but did not seek treatment for mental health issues becuase they did not
+            know where to go if they needed a service.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h2 class="title">What we provide ?</h2>
+
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">One on One Counselling</a></h4>
+            <p class="description">Experience the transformative power of dedicated support with our One-on-One
+              Counseling. Tailored to your unique needs, our compassionate therapists guide you towards personal growth
+              and holistic well-being</p>
+          </div>
+
+          <!-- <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Build Habits</a></h4>
+            <p class="description">Twilio allows COUNSYL to remind users to use the journal to encourage regular
+              expression of feelings.</p>
+          </div>
+        </div> -->
+
+          <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
+        </div>
+
+      </div>
+  </section>
+
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row" data-aos="zoom-in">
+        <div class="col-lg-9 text-center text-lg-start">
+          <h3 class="cta-title">Why We Built This</h3>
+          <p class="cta-text"> Discover a realm where empowerment meets innovation, where confidence is nurtured, and
+            where every click is a step toward well-being. Happier: Your bridge to confidence, your ally in mental
+            health, and your ultimate path to a brighter tomorrow.<br> Happier harnesses the power of technology to
+            bring hope to those who struggle to access or afford mental health services. With a plethora of dynamic
+            features, this app is not just a tool—it's a beacon of resilience and support"</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="hero">
+  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+    {% if current_user.is_authenticated %}
+    <h1>Hi {{ current_user.username }}!</h1>
+    {% endif %}
+    <h1>Welcome to Happier</h1>
+    <h2>Because everyone deserves access to therapy.</h2>
+    <!-- <div class="buttons">
+      <a href="#about" class="btn-get-started">Log In</a>
+
+      <a href="#about" class="btn-get-started">Sign Up</a>
+    </div> -->
+  </div>
+</section>
+
+<main id="main">
+  <section id="facts">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Facts</h3>
+        <p class="section-description">The depressing truth about access to mental health resources in INDIA.</p>
+      </div>
+      <div class="row counters">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0.00" data-purecounter-end="96000000" data-purecounter-duration="1" class="purecounter"></span>
+          <p>...INDIANS have had to wait longer than one week for mental health treatments.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="46" data-purecounter-duration="1" class="purecounter"></span>
+          <p>...percent of the INDIANS sees cost and poor insurance coverage as the top barriers for accessing mental health care.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+          <p>...percent of the INDIAN population reported having to choose between getting mental health treatment and paying for daily necessities.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="29" data-purecounter-duration="1" class="purecounter"></span>
+          <p>...percent of INDIANs wanted to but did not seek treatment for mental health issues becuase they did not know where to go if they needed a service.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h2 class="title">What we provide ?</h2>
+
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Journal</a></h4>
+            <p class="description">Using a speech-to-text API, Happier prompts users to talk about their day and saves a summary of what they have said to their personal diary. This can be used as a reference when going to an actual therapist or as a tool to remember triggers.</p>
+          </div>
+
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Build Habits</a></h4>
+            <p class="description">Twilio allows COUNSYL to remind users to use the journal to encourage regular expression of feelings.</p>
+          </div>
+
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Recommend</a></h4>
+            <p class="description">COUNSYL allows users to find local therapists and other mental health resources near them.</p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row" data-aos="zoom-in">
+        <div class="col-lg-9 text-center text-lg-start">
+          <h3 class="cta-title">Why We Built This</h3>
+          <p class="cta-text"> Happier was created to use technology to help poeple who can't afford or locate mental health services. It is a free web app with many capabilities, ultimatey trying to help people feel confident in reaching out for proper medical support with their mental health issues.</p>
+        </div>
+        <div class="col-lg-3 cta-btn-container text-center">
+          <a class="cta-btn align-middle" href="#about"> LOG IN </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="services">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Services</h3>
+        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-briefcase"></i></a></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-card-checklist"></i></a></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-bar-chart"></i></a></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-binoculars"></i></a></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-brightness-high"></i></a></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href=""><i class="bi bi-calendar4-week"></i></a></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}
