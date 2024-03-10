@@ -83,7 +83,7 @@ if (clicked == 0) {
   }
 } if (clicked == 4) {
   transcript[3] = document.getElementById("speechResult").innerHTML
-  msg = "Thank you for using Counsyl."
+  msg = "Thank you for using Happier."
   var check = document.getElementById('checker');
   check.style.display = 'none'
   var checkII = document.getElementById('button');
